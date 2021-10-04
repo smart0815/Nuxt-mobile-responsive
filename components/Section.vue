@@ -77,14 +77,15 @@
                 <img src="../assets/2.png?inline" alt slot="png" />
               </div>
             </div>
-            <div class="pl-12 pr-5">
+            <div class="pl-12 pr-5 relative">
               <div class="flex items-center">
-                <div class="big-number flex-shrink-0">3.</div>
-                <div class="description ml-5">Erstellen dein Lebenslauf</div>
+                <div class="big-number flex-shrink-0 z-10">3.</div>
+                <div class="description ml-5 z-10">Erstellen dein Lebenslauf</div>
               </div>
               <div class="flex justify-end">
-                <img src="../assets/3.png?inline" alt slot="png" />
+                <img class="z-10" src="../assets/3.png?inline" alt slot="png" />
               </div>
+              <div class="absolute ellipse"></div>
             </div>
           </div>
           <div v-bind:class="{ hidden: openTab !== 2, block: openTab === 2 }">
@@ -110,14 +111,15 @@
                 <img src="../assets/4.png?inline" alt slot="png" />
               </div>
             </div>
-            <div class="pl-12 pr-5">
+            <div class="pl-12 pr-5 relative">
               <div class="flex items-center">
-                <div class="big-number flex-shrink-0">3.</div>
-                <div class="description ml-5">Erstellen dein Lebenslauf</div>
+                <div class="big-number flex-shrink-0 z-10">3.</div>
+                <div class="description ml-5 z-10">Erstellen dein Lebenslauf</div>
               </div>
               <div class="flex justify-end">
-                <img src="../assets/5.png?inline" alt slot="png" />
+                <img class="z-10" src="../assets/5.png?inline" alt slot="png" />
               </div>
+              <div class="absolute ellipse"></div>
             </div>
           </div>
           <div v-bind:class="{ hidden: openTab !== 3, block: openTab === 3 }">
@@ -143,14 +145,15 @@
                 <img src="../assets/6.png?inline" alt slot="png" />
               </div>
             </div>
-            <div class="pl-12 pr-5">
+            <div class="pl-12 pr-5 relative">
               <div class="flex items-center">
-                <div class="big-number flex-shrink-0">3.</div>
-                <div class="description ml-5">Erstellen dein Lebenslauf</div>
+                <div class="big-number flex-shrink-0 z-10">3.</div>
+                <div class="description ml-5 z-10">Erstellen dein Lebenslauf</div>
               </div>
               <div class="flex justify-end">
-                <img src="../assets/7.png?inline" alt slot="png" />
+                <img class="z-10" src="../assets/7.png?inline" alt slot="png" />
               </div>
+              <div class="absolute ellipse"></div>
             </div>
           </div>
         </div>
@@ -236,6 +239,17 @@ section {
 
 button:focus {
   outline: 0;
+}
+
+.ellipse {
+  width: 304px;
+  height: 303px;
+  background: #f7fafc 0% 0% no-repeat padding-box;
+  opacity: 1;
+  top: -40px;
+  left: -50px;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 360px) {
